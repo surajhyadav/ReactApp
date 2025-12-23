@@ -9,6 +9,9 @@ jobs:
   docker-build-push:
     runs-on: ubuntu-latest
 
+    permissions:
+       contents: read
+
     steps:
       - name: Checkout source code
         uses: actions/checkout@v4
@@ -21,8 +24,10 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t surajhyadav/reactapp:latest .
+          docker build -t surajhyadav/reactapp:${{ github.sha }} .
+          docker tag surajhyadav/reactapp:${{ github.sha }} surajhyadav/reactapp:latest
 
       - name: Push Docker image
         run: |
+          docker push surajhyadav/reactapp:${{ github.sha }}
           docker push surajhyadav/reactapp:latest
