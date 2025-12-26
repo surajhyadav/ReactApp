@@ -9,11 +9,8 @@ jobs:
   docker-build-push:
     runs-on: ubuntu-latest
 
-    permissions:
-       contents: read
-
     steps:
-      - name: Checkout source code
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Login to Docker Hub
