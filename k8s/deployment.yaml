@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: reactapp
-          image: surajhyadav/reactapp:142706d
+          image: surajhyadav/reactapp:cc6ebf58d3228654a3cec88abbabfeb1310998d2
           imagePullPolicy: Always
           ports:
             - containerPort: 80
