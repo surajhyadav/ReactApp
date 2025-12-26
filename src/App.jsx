@@ -62,7 +62,7 @@ export default function App() {
       <div className="w-full max-w-lg bg-white text-gray-800 rounded-2xl shadow-2xl p-6">
         
         <h1 className="text-3xl font-bold text-center mb-4 text-purple-700">
-          🛒 Smart React Todo App working condition
+          🛒 Smart Rect
         </h1>
 
         {/* Input box */}
